@@ -1,0 +1,1095 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* css基本設定 */
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+sub{
+    vertical-align: sub;
+}
+
+/* 字體設定 */
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.5;
+}
+
+.container{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.header{
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    position: relative;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.nav img{
+    max-width: 218px;
+}
+
+.nav .planBtn{
+    max-width: 136px;
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 32px 8px 32px;
+    background: #FF5D50;
+    border-radius: 22px;
+}
+
+.header-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-main p{
+    font-size: 18px;
+    color: #56C4C5;
+    margin-bottom: 8px;
+}
+
+.header-main h2{
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.header-main h3{
+    font-size: 20px;
+}
+
+.header-main img{
+    max-width: 532px;
+}
+
+@media (max-width:768px){
+    .header{
+        background-image:url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home_sm.svg");
+        background-position:bottom;
+        
+    }
+
+    .nav{
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid #FFD153;
+        margin-bottom: 32px;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+    
+    .nav img{
+        max-width: 130px;
+        margin-left: 21px;
+    }
+    
+    .nav .planBtn{
+        max-width: 128px;
+        margin-right: 40px;
+    }
+
+    .header-main{
+        flex-direction: column;
+    }
+    
+    .header-main p{
+        font-size: 16px;
+    }
+    
+    .header-main h2{
+        font-size: 32px;
+    }
+    
+    .header-main h3{
+        font-size: 16px;
+    }
+    
+    .header-main img{
+        max-width: 304px;
+    }
+}
+
+.main{
+    margin-top: 101px;
+}
+
+.main-SNS{
+    margin-bottom: 100px;
+}
+
+.main-SNS h2{
+    text-align: center;
+    color: #221E1F;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 48px;
+}
+
+.main-SNS-ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.main-SNS-ul li{
+    max-width: 250px;
+}
+
+.main-SNS-ul img{
+    max-width: 90px;
+    margin-bottom: 24px;
+}
+
+.main-SNS-ul h3{
+    color:#221E1F;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.main-SNS-ul p{
+    color: #747474;
+    font-size: 16px;
+}
+
+@media (max-width:768px) {
+    .main{
+        margin-top: 60px;
+    }
+    
+    .main-SNS{
+        margin-bottom: 60px;
+    }
+
+    .main-SNS h2{
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+    
+    .main-SNS-ul{
+        flex-direction:column;
+    }
+    
+    .main-SNS-ul li{
+        max-width: 230px;
+        margin-bottom: 24px;
+    }
+    
+    .main-SNS-ul img{
+        max-width: 60px;
+        margin-bottom: 16px;
+    }
+    
+    .main-SNS-ul h3{
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+}
+
+
+.main-userGroup{
+    margin-bottom: 100px;
+}
+
+.main-userGroup h2{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.main-userGroup p{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 48px;
+}
+
+.main-userGroup-list{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.main-userGroup-list li{
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px #00000014;
+    text-align: center;
+    margin-right: 16px;
+    background: #fff;
+}
+
+.main-userGroup-list li img{
+    border-radius: 12px 12px 0 0;
+    margin-bottom: 16px;
+}
+
+.main-userGroup-list li h3{
+    font-size: 16px;
+    color:#56C4C5;
+    margin-bottom: 16px;
+}
+
+.main-userGroup-list li p{
+    font-size: 16px;
+    color:#221E1F;
+    margin-bottom: 24px;
+
+}
+
+@media (max-width:768px){
+    .main-userGroup{
+        margin-bottom: 60px;
+    }
+    
+    .main-userGroup h2{
+        font-size: 28px;
+    }
+    
+    .main-userGroup p{
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 32px;
+    }
+
+    .main-userGroup-list{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-userGroup-list li{
+        margin-right: 0px;
+        margin-bottom: 24px;
+    }
+}
+
+
+.main-feature{
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.main-feature-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+    margin-right: 137px;
+}
+
+.main-feature-list li{
+    width: 230px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px #00000014;
+    padding: 32px;
+    margin-bottom: 28px;
+}
+
+.main-feature-list li img{
+    max-width: 86px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 10px #00000014;
+    padding: 17px;
+    margin-bottom: 24px;
+}
+
+.main-feature-list li h3{
+    font-size: 18px;
+    font-weight: bold;
+    color: #221E1F;
+    margin-bottom: 16px;
+}
+
+.main-feature-list li p{
+    font-size: 16px;
+    color: #221E1F;
+    margin-bottom: 16px;
+}
+
+.main-feature-article{
+    width: 40%;
+}
+
+.main-feature-article h2{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color:#221E1F;
+}
+
+.main-feature-article p{
+    color: #221E1F;
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+.main-feature-article a{
+    max-width: 136px;
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    padding: 12px 32px 12px 32px;
+    background: #56C4C5;
+    border-radius: 27px;
+}
+
+@media (max-width:768px) {
+    .main-feature{
+        flex-direction: column-reverse;
+        margin-bottom: 60px;
+    }
+
+    .main-feature-article{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .main-feature-article h2{
+        font-size: 28px;
+    }
+    
+    .main-feature-article p{
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .main-feature-article a{
+        margin-bottom: 32px;
+    }
+
+
+        
+    .main-feature-list{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0px;
+    }
+
+    .main-feature-list li{
+        padding: 24px;
+        margin-bottom: 24px;
+    }
+
+    .main-feature-list li h3{
+        margin-bottom: 20px;
+    }
+
+    .main-feature-list li p{
+        margin-bottom: 24px;
+    }
+
+}
+
+.main-review h2{
+    font-size: 32px;
+    font-weight: bold;
+    color: #221E1F;
+    text-align: center;
+    margin-bottom: 104px;
+}
+
+.main-review-list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.main-review-list li{
+    max-width: 352px;
+    padding-top: 48px;
+    padding-left: 32px;
+    padding-right: 32px;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px #00000014;
+}
+
+
+.main-review-list-photo{
+    position:absolute;
+    width: 80px;
+    border-radius: 50%;
+    top: -56px;
+    left: 32px;
+}
+
+.main-review-list-description{
+    padding-bottom: 24px;
+    border-bottom: 1px solid #DDDDDD;
+    color: #221E1F;
+}
+
+
+
+.main-review-list-data{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.main-review-list-profile{
+    width: 50%;
+    margin-right: 30px;
+}
+
+.main-review-list-profile h3{
+    font-size: 16px;
+    font-weight: bold;
+    color: #221E1F;
+    margin-bottom: 8px;
+}
+
+.main-review-list-profile p{
+    font-size: 16px;
+    color: #221E1F;
+}
+
+.main-review-list-data img{
+    width: 17px;
+
+}
+
+@media (max-width:768px){
+    .main-review h2{
+        font-size: 28px;
+        margin-bottom: 88px;
+    }
+
+        
+    .main-review-list{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 94px;
+    }
+
+    .main-review-list li{
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .main-review-list li:nth-child(n+2){
+        display: none;
+    }
+
+    .main-review-list-description{
+        padding-bottom: 16px;
+    }
+
+        
+    .main-review-list-data{
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+}
+
+.footer-plan{
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.footer-plan .container{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer-plan h2{
+    font-weight: bold;
+    font-size: 32px;
+    margin-top: 260px;
+    margin-bottom: 48px;
+}
+
+.footer-plan a{
+    max-width: 136px;
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    padding: 12px 32px 12px 32px;
+    background: #56C4C5;
+    border-radius: 27px;
+    margin-bottom: 100px;
+}
+
+.copyright{
+    background: #F5F5F5;
+}
+
+.copyright p{
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+@media (max-width:768px) {
+    .footer-plan{
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/footer_sm.svg");
+    }
+
+    .footer-plan h2{
+        font-weight: bold;
+        font-size: 24px;
+        margin-top: 293px;
+        margin-bottom: 24px;
+    }
+
+    .footer-plan a{
+        margin-bottom: 60px;
+    }
+
+}
+
+.btnHover:hover{
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+.topBtn{
+    position: fixed;
+    right: 48px;
+    bottom: 23px;
+    z-index: 1000;
+}
+
+.topBtn a{
+    display: block;
+    background: #56C4C5;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 18px 10px;
+}
+
+@media (max-width:768px){
+    .topBtn{
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .topBtn a{
+        font-size: 14px;
+    }
+}
+
+/* 以下planpage.html 的CSS */
+
+.planHeader{
+    background-color: #F7F9FD;
+    border-radius: 0 0 0 300px;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.planHeader-banner{
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner.svg");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    width: 885px;
+    height: 559px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+}
+
+.planHeader-bannerSm{
+    display: none;
+}
+
+.planHeader .nav{
+    position: relative;
+    z-index: 5;
+}
+
+.planHeader-main{
+    padding-top: 92px;
+    padding-bottom: 180px;
+    position: relative;
+    z-index: 5;
+}
+
+.planHeader-main h2{
+    font-size: 48px;
+    font-weight: bold;
+    color:#221E1F;
+    margin-bottom: 16px;
+}
+
+.planHeader-main p{
+    font-size: 16px;
+    color:#221E1F;
+}
+
+@media (max-width:768px) {
+    .planHeader{
+        margin-bottom: 60px;
+    }
+
+    .planHeader-banner{
+        display: none;
+    }
+
+    .planHeader-bannerSm{
+        display: block;
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner_sm.svg");
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 100%;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0px;
+        right: 0px;
+        z-index: 2;
+    }
+    
+    .planHeader .nav{
+        position: relative;
+        z-index: 5;
+        background-color: #fff;
+    }
+
+        
+    .planHeader-main{
+        padding-top: 48px;
+        padding-bottom: 361px;
+    }
+
+    .planHeader-main h2{
+        font-size: 32px;
+    }
+}
+
+.planMain-plan h2{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.planMain-plan-list{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 130px;
+    padding-right: 130px;
+    margin-bottom: 54px;
+}
+
+.planMain-plan-list li{
+    border-radius: 27px;
+    border: 1px solid #56C4C5;
+    font-size: 18px;
+    text-align: center;
+    color: #56C4C5;
+    padding: 12px 32px 12px 32px;
+    white-space: nowrap;
+    margin-right: 16px;
+}
+
+.planMain-plan-list li:first-child{
+    background: #56C4C5;
+    color: #fff;
+}
+
+.planMain-plan-type{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.planMain-plan-type-li{
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px #00000014;
+    width: 444px;
+}
+
+.planMain-plan-type-li h3{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #221E1F;
+    padding-top: 10px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 32px;
+}
+
+.planMain-plan-type-li p{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 32px; 
+}
+
+.planMain-plan-type-calc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 32px;
+}
+
+.planMain-plan-type-calc p{
+    font-size: 29px;
+    margin-top: 33px;
+}
+
+.planMain-plan-type-calc-userNum{
+    width: 169px;
+    border-radius: 12px;
+    background: #F5F5F5;
+    padding-bottom: 24px;
+    margin-right: 21px;
+    text-align: center;
+}
+
+.planMain-plan-type-calc-userNum p{
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    color: #221E1F;
+}
+
+.planMain-plan-type-calc-userNum span{
+    font-size: 32px;
+    color: #56C4C5;
+    margin-right: 8px;
+}
+
+.planMain-plan-type-calc-userNum sub{
+    font-size: 12px;
+    color: #56C4C5;
+    font-weight: bold;
+}
+
+.planMain-plan-type-calc-cost{
+    width: 169px;
+    border-radius: 12px;
+    background: #F5F5F5;
+    padding-bottom: 24px;
+    margin-left: 21px;
+    text-align: center;
+}
+.planMain-plan-type-calc-cost p{
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    color: #221E1F;
+}
+
+.planMain-plan-type-calc-cost span{
+    font-size: 32px;
+    margin-right: 8px;
+}
+
+.planMain-plan-type-calc-cost sub{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.planMain-plan-type-features{
+    list-style-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_check.svg") ;
+    padding-left: 48px;
+    margin-bottom: 32px;
+}
+
+.planMain-plan-type-features li{
+    font-size: 16px;
+    margin-bottom: 16px;
+    color: #221E1F;
+    padding-left: 12px;
+}
+
+.planMain-plan-type-li a{
+    display: block;
+    width: 136px;
+    border-radius: 27px;
+    background: #56C4C5;
+    text-align: center;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+}
+
+@media (max-width:768px){
+    .planMain-plan h2{
+        font-size: 28x;
+        margin-bottom: 24px;
+    }
+    
+    .planMain-plan-list{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        overflow: scroll;
+    }
+
+    .planMain-plan-list li{
+        font-size: 16px;
+        padding: 8px 16px 8px 16px;
+    }
+
+        
+    .planMain-plan-type{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    .planMain-plan-type-li{
+        width: 335px;
+        margin-bottom: 24px;
+    }
+
+    .planMain-plan-type-li h3{
+        margin-top: 16px;
+        margin-bottom: 24px;
+    }
+
+    .planMain-plan-type-li p{
+        margin-bottom: 24px; 
+    }
+
+        
+    .planMain-plan-type-calc{
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 27px;
+    }
+
+    .planMain-plan-type-calc p{
+        font-size: 24px;
+    }
+
+    .planMain-plan-type-calc-userNum{
+        width: 139px;
+        padding-bottom: 16px;
+        margin-right: 6px;
+        text-align: center;
+    }
+
+    .planMain-plan-type-calc-userNum p{
+        font-size: 12px;
+        margin-top: 16px;
+        margin-bottom: 8px;
+    }
+
+    .planMain-plan-type-calc-userNum span{
+        font-size: 28px;
+        color: #56C4C5;
+        margin-right: 4px;
+    }
+
+    .planMain-plan-type-calc-cost{
+        width: 139px;
+        padding-bottom: 16px;
+        margin-left: 6px;
+    }
+    .planMain-plan-type-calc-cost p{
+        font-size: 12px;
+        margin-top: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .planMain-plan-type-calc-cost span{
+        font-size: 28px;
+        margin-right: 4px;
+    }
+    
+        
+    .planMain-plan-type-features{
+        margin-bottom: 24px;
+    }
+
+    .planMain-plan-type-features li{
+        font-size: 14px;
+    }
+
+    .planMain-plan-type-li a{
+        display: block;
+        width: 136px;
+        margin-bottom: 24px;
+    }
+}
+
+.planMain-FAQ{
+    margin-bottom: 100px;
+}
+
+.planMain-FAQ h2{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #221E1F;
+    margin-bottom: 48px;
+}
+
+.planMain-FAQ-list li{
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px #00000014;
+    margin-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.planMain-FAQ-list-title{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.planMain-FAQ-list-title h3{
+    font-size: 18px;
+    color: #221E1F;
+}
+
+.planMain-FAQ-list-title img{
+    width: 20px;
+}
+
+.planMain-FAQ-list li p{
+    display: none;
+}
+
+.planMain-FAQ-list li:nth-child(3) .planMain-FAQ-list-title h3{
+    color:#56C4C5;
+    font-weight: bold;
+}
+
+.planMain-FAQ-list li:nth-child(3) p{
+    display: block;
+    font-size: 16px;
+    color: #747474;
+    line-height: 2;
+    padding-top: 8px;
+    padding-bottom: 32px;
+}
+
+@media (max-width:768px){
+    .planMain-FAQ{
+        margin-bottom: 60px;
+    }
+    
+    .planMain-FAQ h2{
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+    
+    .planMain-FAQ-list li{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .planMain-FAQ-list-title h3{
+        font-size: 16px;
+    }
+
+    .planMain-FAQ-list-title img{
+        width: 16px;
+    }
+
+    .planMain-FAQ-list li:nth-child(3) p{
+        padding-top: 0px;
+        padding-bottom: 24px;
+    }
+}
+
